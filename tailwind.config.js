@@ -9,6 +9,13 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+
+      extend: {
+        fontFamily: {
+          sans: ['Montserrat', 'sans-serif'],
+        },
+      },
+
     container: {
       center: true,
       padding: "2rem",

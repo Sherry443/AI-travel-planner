@@ -23,16 +23,33 @@ function HotelCardItem({ hotel }) {
     return (
         <Link to={'https://www.google.com/maps/search/?api=1&query=' + hotel?.name + "," + hotel?.address} target='_blank'>
 
-            <div className='hover:scale-110 transition-all cursor-pointer mt-5 mb-8'>
-                <img src={photoUrl?photoUrl:'/placeholder.jpg'} className='rounded-xl h-[180px] w-full object-cover' />
-                <div className='my-2'>
-                    <h2 className='font-medium'>{hotel?.name}</h2>
-                    <h2 className='text-xs text-gray-500'>📍{hotel?.address}</h2>
-                    <h2 className='text-sm'>💰{hotel?.price}</h2>
-                    <h2 className='text-sm'>⭐{hotel?.rating}</h2>
+<div className="bg-white shadow-md rounded-2xl overflow-hidden w-full hover:scale-105 transition-transform cursor-pointer mt-5 mb-8">
+    <div className="relative">
+        <img
+            src={photoUrl ? photoUrl : '/placeholder.jpg'}
+            className="w-full h-[200px] object-cover"
+            alt={hotel?.name}
+        />
+        {/* Optional Sale Badge */}
+        {hotel?.price < 150 && (
+            <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
+                Sale
+            </span>
+        )}
+    </div>
+    <div className="p-4 space-y-1">
+        <h2 className="font-semibold text-lg">{hotel?.name || 'Hotel Name'}</h2>
+        <p className="text-gray-500 text-sm">📍 {hotel?.address || 'Hotel Address'}</p>
+        <div className="flex justify-between items-center pt-1">
+            <p className="text-red-600 font-medium">${hotel?.price || 'N/A'}</p>
+            <div className="text-red-500 text-sm">
+             
+            </div>
+        </div>
+    </div>
+</div>
 
-                </div>
-            </div></Link>
+            </Link>
     )
 }
 
