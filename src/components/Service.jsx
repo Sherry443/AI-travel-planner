@@ -19,7 +19,7 @@ function Services() {
     },
     {
       id: '03',
-      title: 'Flight & Hotel Suggestions',
+      title: 'Flight & Hotel Suggestions Using Chatbot',
       description:
         'Receive real-time recommendations for the best flights and accommodations based on your trip.',
       icon: <PlaneTakeoff className="h-10 w-10 text-white" />,
@@ -46,7 +46,7 @@ function Services() {
   <Clock city="Berlin" timezone="Europe/Berlin" />
   </div>
   <div className="flex items-center justify-center h-40">
-  <Clock city="Istanbul" timezone="Europe/Istanbul" />
+  <Clock city="Tokyo" timezone="Asia/Tokyo" />
   </div>
 </div>
 

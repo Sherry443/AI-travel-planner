@@ -7,6 +7,7 @@ import Service from './components/custom/Service'
 import Footer from './view-trip/components/Footer'
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Chat from "./service/Chatbot"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
       <Service/>
       <ProjectSec/>
       <Video/>
+      <Chat/>
       <Footer/>
     </>
   )
